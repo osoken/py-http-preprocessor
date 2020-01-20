@@ -8,6 +8,7 @@ from logging.config import dictConfig
 from flask import Flask, jsonify, request
 
 from . import db
+from . import models
 
 
 def gen_app(config_object=None, logsetting_file=None):
@@ -27,5 +28,7 @@ def gen_app(config_object=None, logsetting_file=None):
     @app.route('/api/pp')
     def api_pp():
         return jsonify({})
+
+    db.init_db(app)
 
     return app
