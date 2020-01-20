@@ -17,6 +17,9 @@ setup(
     description=__description__,
     long_description=__long_description__,
     packages=[__package_name__],
-    install_requires=['flask', 'scikit-learn', 'shortuuid', 'sqlalchemy'],
+    install_requires=[
+        'flask', 'scikit-learn', 'shortuuid', 'sqlalchemy', 'flask-sqlalchemy',
+        'Flask-Migrate'
+    ],
     extras_require={}
 )
